@@ -5,7 +5,10 @@
 #include "io.hpp"
 
 int main(int argc, const char* argv[]) {
-  if (argc == 1 || argc > 3) return -1;
+  if (argc == 1 || argc > 3) {
+    std::cout << "Invalid argument. Pls try again" << std::endl;
+    return -1;
+  }
 
   const std::string type = argv[1];
   if (type == "gc") {
