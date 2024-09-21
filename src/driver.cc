@@ -2,11 +2,13 @@
 #include <string>
 
 #include "general_concepts.hpp"
+#include "io.hpp"
 
 int main(int argc, const char* argv[]) {
   if (argc == 1 || argc > 3) return -1;
 
-  if (argv[1] == "gc") {
+  const std::string type = argv[1];
+  if (type == "gc") {
     const std::string d = argv[2];
     char dir = 'N';
     double val = 5.5;
@@ -27,7 +29,17 @@ int main(int argc, const char* argv[]) {
       GCStaticCast(val);
     else
       std::cout << "Invalid argument" << std::endl;
-  } else if (argv[1] == "io") {
+  } else if (type == "io") {
     const std::string f = argv[2];
+    if (f == "readfile")
+      ReadInputFile();
+    else if (f == "writefile")
+      WriteGradesFile();
+    else if (f == "readterminal")
+      IoReadTerminal();
+    else
+      std::cout << "Invalid argument" << std::endl;
+  } else {
+    std::cout << "Invalid argument. Pls try again" << std::endl;
   }
 }

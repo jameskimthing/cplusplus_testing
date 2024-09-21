@@ -10,13 +10,13 @@
 void GCVectors() {
   std::cout << "Vectors: ";
   std::vector<int> numbers = {1, 2, 3, 4, 5};
-  for (int i = 0; i < numbers.size(); i++) {
+  for (unsigned long int i = 0; i < numbers.size(); i++) {
     std::cout << numbers[i] << " ";
   }
   std::cout << std::endl;
 }
 void GCVectors(const std::vector<int>& vec) {
-  for (int i = 0; i < vec.size(); i++) {
+  for (unsigned long int i = 0; i < vec.size(); i++) {
     std::cout << vec[i] << " ";
   }
   std::cout << std::endl;

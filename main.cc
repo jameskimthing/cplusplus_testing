@@ -8,17 +8,6 @@
 
 int main() {
   // standard input output
-  std::cout << "Please a monetary value (as dollars.cents): $";
-
-  int dollars = 0;
-  char throw_away = '\0';
-  int cents = 0;
-  std::cin >> dollars >> throw_away >> cents;
-
-  std::cout << "You entered " << dollars << " dollars and " << cents
-            << " cents." << '\n';
-
-  return 0;
 
   std::map<std::string, std::vector<std::string>> courses_taught = {
       {"Math", {"Calculus", "Algebra"}}, {"Science", {"Chemistry", "Physics"}}};

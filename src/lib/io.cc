@@ -39,7 +39,7 @@ void ReadInputFile() {
   return;
 }
 
-void ReadGradesFile() {
+void WriteGradesFile() {
   std::vector<Student> students;
   students.push_back(Student{"Jack", 1234, 3.23});
   students.push_back(Student{"Jill", 5678, 3.67});
@@ -51,4 +51,16 @@ void ReadGradesFile() {
         << '\n';
   }
   return;
+}
+
+void IoReadTerminal() {
+  std::cout << "Please a monetary value (as dollars.cents): $";
+
+  int dollars = 0;
+  char throw_away = '\0';
+  int cents = 0;
+  std::cin >> dollars >> throw_away >> cents;
+
+  std::cout << "You entered " << dollars << " dollars and " << cents
+            << " cents." << '\n';
 }

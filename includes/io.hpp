@@ -5,8 +5,9 @@
 #include <iostream>
 #include <string>
 
-void ReadInputFile() {}
-void ReadGradesFile() {}
+void ReadInputFile();
+void WriteGradesFile();
+void IoReadTerminal();
 
 struct Student {
   std::string name;
