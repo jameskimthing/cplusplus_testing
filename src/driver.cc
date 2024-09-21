@@ -5,7 +5,7 @@
 #include "io.hpp"
 
 int main(int argc, const char* argv[]) {
-  if (argc == 1 || argc > 3) {
+  if (argc != 3) {
     std::cout << "Invalid argument. Pls try again" << std::endl;
     return -1;
   }

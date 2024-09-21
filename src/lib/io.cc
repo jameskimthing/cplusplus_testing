@@ -7,7 +7,7 @@
 
 void ReadInputFile() {
   // assumes this file is within our working
-  const std::string input_file_name("../data/input.txt");
+  const std::string input_file_name("./data/input.txt");
   // directory
   std::ifstream ifs{input_file_name};
   if (!ifs.is_open()) {
@@ -44,7 +44,7 @@ void WriteGradesFile() {
   students.push_back(Student{"Jack", 1234, 3.23});
   students.push_back(Student{"Jill", 5678, 3.67});
 
-  std::ofstream ofs("../data/grades.csv");
+  std::ofstream ofs("./data/grades.csv");
   ofs << "Name,UIN,GPA\n";
   for (unsigned int i = 0; i < students.size(); ++i) {
     ofs << students[i].name << ',' << students[i].uin << ',' << students[i].gpa
