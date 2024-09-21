@@ -2,3 +2,4 @@ main
 .vscode/
 obj/
 bin/*
+!bin/.gitkeep
