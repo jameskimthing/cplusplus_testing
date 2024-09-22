@@ -75,55 +75,55 @@ void GCStaticCast(double& val) {
 }
 void GCSets() {
   std::cout << "Sets: " << std::endl;
-  std::set<int> numberSet = {5, 2, 8, 1, 9, 5};  // Note: 5 is repeated
+  std::set<int> number_set = {5, 2, 8, 1, 9, 5};  // Note: 5 is repeated
 
   std::cout << "Elements in the set: ";
-  for (const auto& elem : numberSet) {
+  for (const auto& elem : number_set) {
     std::cout << elem << " ";
   }
   std::cout << std::endl;
 
-  numberSet.insert(3);
+  number_set.insert(3);
   std::cout << "After inserting 3: ";
-  for (const auto& elem : numberSet) {
+  for (const auto& elem : number_set) {
     std::cout << elem << " ";
   }
   std::cout << std::endl;
 
-  if (numberSet.find(8) != numberSet.end()) {
+  if (number_set.find(8) != number_set.end()) {
     std::cout << "8 is in the set" << std::endl;
   }
 
-  numberSet.erase(2);
+  number_set.erase(2);
   std::cout << "After removing 2: ";
-  for (const auto& elem : numberSet) {
+  for (const auto& elem : number_set) {
     std::cout << elem << " ";
   }
   std::cout << std::endl << std::endl;
 }
 void GCMaps() {
   std::cout << "Maps: " << std::endl;
-  std::map<std::string, int> ageMap = {
+  std::map<std::string, int> age_map = {
       {"Alice", 25}, {"Bob", 30}, {"Charlie", 35}};
 
   std::cout << "Ages in the map:" << std::endl;
-  for (const auto& pair : ageMap) {
+  for (const auto& pair : age_map) {
     std::cout << pair.first << ": " << pair.second << std::endl;
   }
 
-  ageMap["David"] = 40;
+  age_map["David"] = 40;
   std::cout << "After adding David:" << std::endl;
-  for (const auto& pair : ageMap) {
+  for (const auto& pair : age_map) {
     std::cout << pair.first << ": " << pair.second << std::endl;
   }
 
-  if (ageMap.find("Bob") != ageMap.end()) {
-    std::cout << "Bob's age is " << ageMap["Bob"] << std::endl;
+  if (age_map.find("Bob") != age_map.end()) {
+    std::cout << "Bob's age is " << age_map["Bob"] << std::endl;
   }
 
-  ageMap.erase("Alice");
+  age_map.erase("Alice");
   std::cout << "After removing Alice:" << std::endl;
-  for (const auto& pair : ageMap) {
+  for (const auto& pair : age_map) {
     std::cout << pair.first << ": " << pair.second << std::endl;
   }
   std::cout << std::endl;
