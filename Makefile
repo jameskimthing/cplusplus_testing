@@ -7,7 +7,7 @@ HDRS := $(wildcard ./includes/*.hpp)
 exec: bin/exec
 
 bin/exec: ./src/driver.cc $(SRC) $(HDRS) 
-	$(CXX) $(CXX_FLAGS) ./src/driver.cc ./src/lib/*.cc -o $@
+	$(CXX) $(CXX_FLAGS) ./src/driver.cc $(SRC) -o $@
 
 .DEFAULT_GOAL := exec
 .PHONY: exec clean
