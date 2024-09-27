@@ -11,5 +11,7 @@ void GCLimits();
 void GCStaticCast(double& val);
 void GCSets();
 void GCMaps();
+void GCTryCatch();
+void GCAssert();
 
 #endif

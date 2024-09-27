@@ -30,6 +30,10 @@ int main(int argc, const char* argv[]) {
       GCMaps();
     else if (d == "staticcast")
       GCStaticCast(val);
+    else if (d == "trycatch")
+      GCTryCatch();
+    else if (d == "assert")
+      GCAssert();
     else
       std::cout << "Invalid argument" << std::endl;
   } else if (type == "io") {

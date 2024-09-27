@@ -1,5 +1,6 @@
 #include "general_concepts.hpp"
 
+#include <cassert>
 #include <iostream>
 #include <limits>
 #include <map>
@@ -127,4 +128,25 @@ void GCMaps() {
     std::cout << pair.first << ": " << pair.second << std::endl;
   }
   std::cout << std::endl;
+}
+
+void GCTryCatch() {
+  std::cout << "Try/Catch: " << std::endl;
+  // try {
+  //   throw 5;
+  // } catch (int e) {
+  //   std::cout << "Caught an int: " << e << std::endl;
+  // }
+
+  try {
+    throw std::runtime_error("This is a runtime error");
+  } catch (const std::exception& e) {
+    std::cout << "Caught an exception: " << e.what() << std::endl;
+  }
+}
+
+void GCAssert() {
+  std::cout << "Assert: " << std::endl;
+  assert(5 == 5);
+  assert(5 == 6);
 }
