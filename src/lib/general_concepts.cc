@@ -155,6 +155,7 @@ void GCPointers() {
   std::cout << "Pointers: " << std::endl;
   int i = 7;
   int* ptr = &i;
+  *ptr = 8;
 
-  std::cout << &ptr << ' ' << ptr << ' ' << *ptr << std::endl;
+  std::cout << &ptr << ' ' << ptr << ' ' << *ptr << ' ' << i << std::endl;
 }
