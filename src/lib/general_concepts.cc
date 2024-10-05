@@ -159,3 +159,9 @@ void GCPointers() {
 
   std::cout << &ptr << ' ' << ptr << ' ' << *ptr << ' ' << i << std::endl;
 }
+
+void GCArrays() {
+  std::cout << "Arrays: " << std::endl;
+  int arr[5] = {1, 2, 3, 4, 5};
+  std::cout << (sizeof(arr) / sizeof(*arr)) << ' ' << arr[2] << std::endl;
+}

@@ -36,6 +36,8 @@ int main(int argc, const char* argv[]) {
       GCAssert();
     else if (d == "pointers")
       GCPointers();
+    else if (d == "arrays")
+      GCArrays();
     else
       std::cout << "Invalid argument" << std::endl;
   } else if (type == "io") {

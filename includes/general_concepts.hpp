@@ -14,5 +14,6 @@ void GCMaps();
 void GCTryCatch();
 void GCAssert();
 void GCPointers();
+void GCArrays();
 
 #endif
