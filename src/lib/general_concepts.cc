@@ -150,3 +150,11 @@ void GCAssert() {
   assert(5 == 5);
   assert(5 == 6);
 }
+
+void GCPointers() {
+  std::cout << "Pointers: " << std::endl;
+  int i = 7;
+  int* ptr = &i;
+
+  std::cout << &ptr << ' ' << ptr << ' ' << *ptr << std::endl;
+}

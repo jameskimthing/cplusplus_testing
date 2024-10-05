@@ -13,5 +13,6 @@ void GCSets();
 void GCMaps();
 void GCTryCatch();
 void GCAssert();
+void GCPointers();
 
 #endif

@@ -34,6 +34,8 @@ int main(int argc, const char* argv[]) {
       GCTryCatch();
     else if (d == "assert")
       GCAssert();
+    else if (d == "pointers")
+      GCPointers();
     else
       std::cout << "Invalid argument" << std::endl;
   } else if (type == "io") {
