@@ -34,9 +34,9 @@ GenericClass::~GenericClass() {
 }
 
 // Getters and setters
-int GenericClass::a() { return a_; }
-int GenericClass::b() { return b_; }
-int GenericClass::c() { return c_; }
+int GenericClass::a() const { return a_; }
+int GenericClass::b() const { return b_; }
+int GenericClass::c() const { return c_; }
 void GenericClass::a(int new_a) {
   if (!ValidABC(new_a)) throw std::runtime_error("Invalid value");
   a_ = new_a;

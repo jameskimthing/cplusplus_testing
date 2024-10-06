@@ -14,9 +14,10 @@ public:
   ~GenericClass();
 
   // Getters and setters
-  int a();
-  int b();
-  int c();
+  int a() const;  // adding const specifies that this method does not mutate the
+                  // inner state of the class instance
+  int b() const;
+  int c() const;
   void a(int new_a);
   void b(int new_b);
   void c(int new_c);
