@@ -2,6 +2,7 @@
 
 #include <iostream>
 #include <stdexcept>
+#include <string>
 
 void RunGenericClass() {
   GenericClass gc = GenericClass(7);
@@ -14,6 +15,16 @@ void RunGenericClass() {
   std::cout << "a: " << gc.a() << std::endl;
   std::cout << "b: " << gc.b() << std::endl;
   std::cout << "c: " << gc.c() << std::endl;
+
+  // Prepend them all to a string
+  std::string str = "";
+  str += "a: ";
+  str += std::to_string(gc.a());
+  str += ", b: ";
+  str += std::to_string(gc.b());
+  str += ", c: ";
+  str += std::to_string(gc.c());
+  std::cout << str << std::endl;
 }
 
 // Constructors and Destructors
