@@ -2,11 +2,12 @@
 #include <string>
 
 #include "general_concepts.hpp"
+#include "generic_class.hpp"
 #include "io.hpp"
 
 int main(int argc, const char* argv[]) {
   if (argc != 3) {
-    std::cout << "Invalid argument. Pls try again" << std::endl;
+    std::cout << "Need at least 3 arguments" << std::endl;
     return -1;
   }
 
@@ -50,6 +51,8 @@ int main(int argc, const char* argv[]) {
       IoReadTerminal();
     else
       std::cout << "Invalid argument" << std::endl;
+  } else if (type == "class") {
+    RunGenericClass();
   } else {
     std::cout << "Invalid argument. Pls try again" << std::endl;
   }
