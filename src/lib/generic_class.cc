@@ -72,6 +72,21 @@ bool GenericClass::ValidABC(int val) {
   return true;
 }
 
+/*
+Member or nonmember implementation?
+We must decide whether to define an overloaded operator as a class member or a
+nonmember function
+ - Some operators are required to be members; others may not be able to be
+   correctly defined as such
+When overloading an operator, you should follow these guidelines:
+ - Assignment (=), subscript([ ]), call (( )), and member access arrow (->) must
+be defined as members
+ - Compound assignment operators (ex., +=) should be defined as members
+ - Operators that change the state of an object should be defined as members
+ - Symmetric operators should be defined as non-members
+    - We want to use symmetric operators in expressions with mixed types
+*/
+
 // OPERATORS
 bool GenericClass::operator==(const GenericClass& other) const {
   return (a_ == other.a_ && b_ == other.b_ && c_ == other.c_);
