@@ -2,6 +2,7 @@
 
 #include <fstream>
 #include <iostream>
+#include <limits>
 #include <string>
 #include <vector>
 
@@ -29,12 +30,28 @@ void ReadInputFile() {
     ifs >> student_uin >> throw_away >> student_gpa >> throw_away >>
         student_midterm >> throw_away >> student_final;
     // print error
-    if (ifs.fail()) std::cout << "Error reading data" << std::endl;
+    // ifs.fail is a recoverable error
+    if (ifs.fail()) {
+      std::cout << "Error reading line: ";
+      ifs.clear();
+
+      std::string error_line;
+      std::getline(ifs, error_line);
+      std::cout << error_line << std::endl;
+
+      // ignore the rest of the line, if not want to print out instead
+      // ifs.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+
+      continue;
+    }
     // break;
     // print
+    std::cout << "Reading: ";
     std::cout << student_uin << " " << student_gpa << " " << student_midterm
-              << " " << student_final << std::endl;
+              << " " << student_final << "\n";
   }
+
+  std::cout << std::endl;
 
   return;
 }
