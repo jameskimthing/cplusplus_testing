@@ -22,6 +22,9 @@ public:
   void b(int new_b);
   void c(int new_c);
 
+  // Operator
+  bool operator==(const GenericClass& other) const;
+
 private:
   bool ValidABC(int val);
 

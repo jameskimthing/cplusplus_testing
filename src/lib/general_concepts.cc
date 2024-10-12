@@ -129,7 +129,6 @@ void GCMaps() {
   }
   std::cout << std::endl;
 }
-
 void GCTryCatch() {
   std::cout << "Try/Catch: " << std::endl;
   // try {
@@ -144,13 +143,11 @@ void GCTryCatch() {
     std::cout << "Caught an exception: " << e.what() << std::endl;
   }
 }
-
 void GCAssert() {
   std::cout << "Assert: " << std::endl;
   assert(5 == 5);
   assert(5 == 6);
 }
-
 void GCPointers() {
   std::cout << "Pointers: " << std::endl;
   int i = 7;
@@ -159,7 +156,6 @@ void GCPointers() {
 
   std::cout << &ptr << ' ' << ptr << ' ' << *ptr << ' ' << i << std::endl;
 }
-
 void GCArrays() {
   std::cout << "Arrays: " << std::endl;
   int arr[5] = {1, 2, 3, 4, 5};

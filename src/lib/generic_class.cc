@@ -25,6 +25,13 @@ void RunGenericClass() {
   str += ", c: ";
   str += std::to_string(gc.c());
   std::cout << str << std::endl;
+
+  // operator
+  GenericClass gc2 = gc;
+  std::cout << "a: " << gc2.a() << std::endl;
+  std::cout << "b: " << gc2.b() << std::endl;
+  std::cout << "c: " << gc2.c() << std::endl;
+  if (gc == gc2) std::cout << "gc == gc2" << std::endl;
 }
 
 // Constructors and Destructors
@@ -63,4 +70,9 @@ void GenericClass::c(int new_c) {
 bool GenericClass::ValidABC(int val) {
   if (val < 0 || val > 100) return false;
   return true;
+}
+
+// OPERATORS
+bool GenericClass::operator==(const GenericClass& other) const {
+  return (a_ == other.a_ && b_ == other.b_ && c_ == other.c_);
 }
