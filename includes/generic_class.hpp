@@ -39,6 +39,8 @@ private:
 
 void RunGenericClass();
 
+std::ostream& operator<<(std::ostream& os, const GenericClass& gc);
+
 // non-member overload
 // bool operator==(const GenericClass& a1, const GenericClass& a2);
 

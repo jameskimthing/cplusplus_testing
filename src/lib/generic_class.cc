@@ -32,6 +32,9 @@ void RunGenericClass() {
   std::cout << "b: " << gc2.b() << std::endl;
   std::cout << "c: " << gc2.c() << std::endl;
   if (gc == gc2) std::cout << "gc == gc2" << std::endl;
+
+  // operator ostream
+  std::cout << "gc:" << gc << std::endl;
 }
 
 // Constructors and Destructors
@@ -87,10 +90,21 @@ be defined as members
     - We want to use symmetric operators in expressions with mixed types
 */
 
+std::ostream& operator<<(std::ostream& os, const GenericClass& gc) {
+  os << "a: " << gc.a() << ", b: " << gc.b() << ", c: " << gc.c();
+  return os;
+}
+
 // OPERATORS
 bool GenericClass::operator==(const GenericClass& other) const {
   return (a_ == other.a_ && b_ == other.b_ && c_ == other.c_);
 }
+
+// Using "this"
+// bool GenericClass::operator==(const GenericClass& other) const {
+//   return (this->a_ == other.a_ && this->b_ == other.b_ && this->c_ ==
+//   other.c_);
+// }
 
 // Definition of the non-member operator== function
 // bool operator==(const GenericClass& a1, const GenericClass& a2) {
