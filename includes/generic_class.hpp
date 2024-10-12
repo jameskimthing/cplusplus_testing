@@ -39,4 +39,7 @@ private:
 
 void RunGenericClass();
 
+// non-member overload
+// bool operator==(const GenericClass& a1, const GenericClass& a2);
+
 #endif

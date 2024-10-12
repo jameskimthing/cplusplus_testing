@@ -76,3 +76,8 @@ bool GenericClass::ValidABC(int val) {
 bool GenericClass::operator==(const GenericClass& other) const {
   return (a_ == other.a_ && b_ == other.b_ && c_ == other.c_);
 }
+
+// Definition of the non-member operator== function
+// bool operator==(const GenericClass& a1, const GenericClass& a2) {
+//     return (a1.a() == a2.a() && a1.b() == a2.b() && a1.c() == a2.c());
+// }
