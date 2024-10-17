@@ -16,4 +16,8 @@ void FreeCharArray(char* array) {
 void RunMemory() {
   char* array = AllocateCharArray(10);
   FreeCharArray(array);
+
+  char* p_char = new char('a');
+  std::cout << *p_char << std::endl;
+  delete p_char;
 }
