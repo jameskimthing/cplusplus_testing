@@ -4,10 +4,11 @@
 #include "general_concepts.hpp"
 #include "generic_class.hpp"
 #include "io.hpp"
+#include "memory.hpp"
 
 int main(int argc, const char* argv[]) {
-  if (argc != 3) {
-    std::cout << "Need at least 3 arguments" << std::endl;
+  if (argc != 3 && argc != 2) {
+    std::cout << "Need at least 3 or 2 arguments" << std::endl;
     return -1;
   }
 
@@ -53,6 +54,8 @@ int main(int argc, const char* argv[]) {
       std::cout << "Invalid argument" << std::endl;
   } else if (type == "class") {
     RunGenericClass();
+  } else if (type == "memory") {
+    RunMemory();
   } else {
     std::cout << "Invalid argument. Pls try again" << std::endl;
   }
