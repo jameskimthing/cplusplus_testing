@@ -9,6 +9,11 @@ exec: bin/exec
 bin/exec: ./src/driver.cc $(SRC) $(HDRS) 
 	$(CXX) $(CXX_FLAGS) ./src/driver.cc $(SRC) -o $@
 
+sanitize: bin/sanitize
+
+bin/sanitize: ./src/driver.cc $(SRC) $(HDRS)
+	$(CXX) $(CXX_FLAGS) -fsanitize=address -fno-omit-frame-pointer ./src/driver.cc $(SRC) -o $@
+
 .DEFAULT_GOAL := exec
 .PHONY: exec clean
 

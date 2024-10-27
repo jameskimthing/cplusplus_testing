@@ -162,6 +162,13 @@ void GCArrays() {
   std::cout << (sizeof(arr) / sizeof(*arr)) << ' ' << arr[2] << ' ' << arr[4]
             << std::endl;
 
+  // out of bounds
+  // auto thing = 5;
+  // thing++;
+  // thing--;
+
+  // std::cout << arr[thing] << std::endl;
+
   // Pointer arithmetic,
   std::cout << *(arr + 0) << ' ' << *(arr + 2) << ' ' << *(arr + 4)
             << std::endl;
